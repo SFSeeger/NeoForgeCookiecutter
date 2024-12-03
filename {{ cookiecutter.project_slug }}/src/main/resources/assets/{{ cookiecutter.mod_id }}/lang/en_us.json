@@ -1,0 +1,5 @@
+{
+  {% if cookiecutter.create_boilerplate_classes %}
+  "itemGroup.{{ cookiecutter.mod_id }}": {{ cookiecutter.mod_name }} Tab"
+  {% endif %}
+}

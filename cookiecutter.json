@@ -1,0 +1,16 @@
+{
+    "authors": "Simon Felix Seeger",
+    "mod_name": "Neoforge Template",
+    "mod_class_name": "{{ cookiecutter.mod_name.title().replace(' ', '') }}",
+    "mod_id": "{{ cookiecutter.mod_name.lower().replace(' ', '_') }}",
+    "project_slug": "{{ cookiecutter.mod_name.lower().replace(' ', '_') }}",
+    "group_id": "io.github.sfseeger",
+    "_package_name": "{{ cookiecutter.group_id }}.{{ cookiecutter.mod_id }}",
+    "description": "A simple Template for Neoforge Mods",
+    "version": "0.0.1",
+    "create_boilerplate_classes": true,
+    "license": [
+        "MIT"
+    ],
+   "year": "{% now 'utc', '%Y' %}"
+}

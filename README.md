@@ -1,25 +1,40 @@
+# Neoforge Cookiecutter Template for 1.21
+A simple template for creating neoforge mods
 
-Installation information
-=======
+## Setup:
+Install cookiecutter to your system using
+```bash
+pipx install cookiecutter
+```
+if you dont have pipx use
+```bash
+python -m pip install --user cookiecutter
+```
 
-This template repository can be directly cloned to get you started with a new
-mod. Simply create a new repository cloned from this one, by following the
-instructions provided by [GitHub](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
+Run *one* of the following commands in your target folder to start the setup process 
+```bash
+# Quick install:
+cookiecutter https://github.com/SFSeeger/NeoForgeCookiecutter.git
 
-Once you have your clone, simply open the repository in the IDE of your choice. The usual recommendation for an IDE is either IntelliJ IDEA or Eclipse.
+# "Fron source"
+git clone https://github.com/SFSeeger/NeoForgeCookiecutter.git
+cookiecutter NeoForgeCookiecutter
+```
 
-If at any point you are missing libraries in your IDE, or you've run into problems you can
-run `gradlew --refresh-dependencies` to refresh the local cache. `gradlew clean` to reset everything 
-{this does not affect your code} and then start the process again.
+Answer the questions and wait for the process to be completed.
 
-Mapping Names:
-============
-By default, the MDK is configured to use the official mapping names from Mojang for methods and fields 
-in the Minecraft codebase. These names are covered by a specific license. All modders should be aware of this
-license. For the latest license text, refer to the mapping file itself, or the reference copy here:
-https://github.com/NeoForged/NeoForm/blob/main/Mojang.md
+## Parameters
+* **authors:** Comma separated list of Authors e.g. Max Musterman, Jon Doe
+* **mod_name:** Name of the mod, quite magical
+* **mod_class_name:** Don't change this value, except if you want your classes to follow a different naming scheme
+* **mod_id:** The modid Minecraft registers your mod stuff under. It's like the `minecraft` in front of `minecraft:dirt` 
+* **project_slug:** The folder where your mod will live in
+* **group_id:** Your maven group. The [quill documentation](https://wiki.quiltmc.org/en/introduction/setting-up#making-the-mod-yours) explains what it is used for. If you don't own or want to use your domain, just use `io.github.[YOUR_USERNAME]`
+* **description:** A description for your mod, duh..
+* **version:** A version for your mod. you can set it to whatever you like :)
+* **create_boilerplate_classes:** Determines if classes for Registration and Event handling should be created. Also creates some useful directories for development
+* **license:** WIP if you don't want to use MIT, change it manually ig
+* **year:** The current year. Mostly for checking if it is correct.
 
-Additional Resources: 
-==========
-Community Documentation: https://docs.neoforged.net/  
-NeoForged Discord: https://discord.neoforged.net/
+# Usage
+Have fun developing some cool mods. The mod includes a creative Tab, which will only render if you put an item into it. Otherwise there will be some weirdness in the creative menu

@@ -1,0 +1,1 @@
+{{ cookiecutter.update({"_package_name": cookiecutter.group_id + "." + cookiecutter.mod_id }) }}
